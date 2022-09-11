@@ -26,7 +26,7 @@ window.title("ISS Location")
 window.geometry("300x300")
 
 #Add icon to window
-window.iconbitmap("iss.ico")
+
 
 # Add message greeting the user
 greeting = Label(text="Welcome to the ISS Location App.")
