@@ -1,7 +1,9 @@
+from tkinter import _Anchor
 import webbrowser
 from tkinter import *
 from tkinter import ttk
 from isslocation import iss_lat, iss_long
+import sv_ttk
 
 
 # When the update button is clicked, the iss_lat and iss_long functions are called and the values are displayed in the labels
@@ -22,6 +24,7 @@ def google_maps():
 
 # The window
 window = Tk()
+sv_ttk.set_theme("dark")
 window.title("ISS Location")
 window.geometry("300x300")
 
@@ -32,7 +35,7 @@ window.geometry("300x300")
 greeting = Label(text="Welcome to the ISS Location App.")
 
 #Exit button
-exit_button = ttk.Button(text="Exit", command=window.destroy)
+exit_button = ttk.Button(text="Exit", command=window.destroy, width=10)
 
 # Lat and Long Text
 lat_text = Label(text="Latitude:")
@@ -49,7 +52,7 @@ long_label = Label(window, text="Longitude")
 google_maps_button = ttk.Button(text="Show in Google Maps", command=google_maps)
 
 # Create the update button
-update_button = Button(window, text="Update", command=update_location)
+update_button = ttk.Button(window, text="Update",  command=update_location,)
 
 # The layout
 # Latitute and Longitude labels below the greeting
