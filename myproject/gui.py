@@ -1,4 +1,3 @@
-from tkinter import _Anchor
 import webbrowser
 from tkinter import *
 from tkinter import ttk
